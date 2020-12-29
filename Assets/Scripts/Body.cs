@@ -11,6 +11,7 @@ public class Body : MonoBehaviour
     public float rotationSpeed = 180;
     public float groundTouchDistance = 0.1f;
     private bool touchGround = false;
+    private bool doubleSaut = false;
     public float TimeBetweenJumps = 0.3f;
     private float TimeJump = 0;
     public float PowerJump = 10;
@@ -96,10 +97,18 @@ public class Body : MonoBehaviour
 
         //On ajoute le jump
         TimeJump -= Time.deltaTime;
-        if (MyController.WantsToJump && touchGround && TimeJump <= 0)
+        if (MyController.WantsToJump && touchGround && TimeJump <= 0 )
         {
             TimeJump = TimeBetweenJumps;
             GetComponent<Rigidbody>().AddForce(new Vector3(0, 1, 0) * PowerJump, ForceMode.Impulse);
+            doubleSaut = true;
+            
+        }else if (MyController.WantsToJump && doubleSaut && TimeJump <= 0)
+        {
+            TimeJump = TimeBetweenJumps;
+            GetComponent<Rigidbody>().AddForce(new Vector3(0, 1, 0) * PowerJump, ForceMode.Impulse);
+            doubleSaut = false;
         }
+
     }
 }

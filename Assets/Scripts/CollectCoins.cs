@@ -11,8 +11,15 @@ public class CollectCoins : MonoBehaviour
        
         if (col.tag == "Coin")
         {
-            Destroy(col.gameObject);
+            Feed();
             score += 1;
+            Destroy(col.gameObject);
         }
+    }
+
+    void Feed()
+    {
+        ParticleSystem exp = GetComponent<ParticleSystem>();
+        exp.Play();
     }
 }
