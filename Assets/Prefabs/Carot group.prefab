@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4096416930694224179
+--- !u!1 &5174379391039381565
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,37 +8,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4096416930694224182}
-  - component: {fileID: 4096416930694224181}
-  - component: {fileID: 4096416930694224180}
+  - component: {fileID: 5174379391039381560}
+  - component: {fileID: 5174379391039381563}
+  - component: {fileID: 5174379391039381562}
   m_Layer: 0
-  m_Name: Coin group
+  m_Name: Carot group 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4096416930694224182
+--- !u!4 &5174379391039381560
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4096416930694224179}
+  m_GameObject: {fileID: 5174379391039381565}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 20, z: 0}
+  m_LocalPosition: {x: 1.2569093, y: 8, z: 3.5529213}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4096416930694224181
+--- !u!114 &5174379391039381563
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4096416930694224179}
+  m_GameObject: {fileID: 5174379391039381565}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a1bc65e88aad1e499bae2dd16a2254f, type: 3}
@@ -59,21 +59,21 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   maxSpeed: 20
   minSpeed: 10
-  drawGizmos: 1
+  drawGizmos: 0
   drawLines: 1
---- !u!114 &4096416930694224180
+--- !u!114 &5174379391039381562
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4096416930694224179}
+  m_GameObject: {fileID: 5174379391039381565}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd4d2e12275b26d419db2478ea289d1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabBoid: {fileID: -5318184748230481491, guid: f3b36ba1a0ad229488c405960db5716e, type: 3}
+  prefabBoid: {fileID: 0}
   nbBoids: 10
   startSpeed: 1
   startSpread: 10
