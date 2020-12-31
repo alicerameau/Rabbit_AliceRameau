@@ -29,7 +29,7 @@ public class Boid : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {/*
         Vector3 sumForces = new Vector3();
         Color colorDebugForce = Color.black;
         float nbForcesApplied = 0;
@@ -150,6 +150,7 @@ public class Boid : MonoBehaviour
 
         //Deplacement du boid
         transform.position += velocity * Time.deltaTime;
+        */
     }
 
     void OnDrawGizmosSelected()

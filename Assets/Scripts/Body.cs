@@ -16,6 +16,14 @@ public class Body : MonoBehaviour
     private float TimeJump = 0;
     public float PowerJump = 10;
 
+    private Animator myAnimator;
+
+    void Start()
+    {
+        myAnimator = gameObject.GetComponent<Animator>();
+    }
+    
+
 
     // Update is called once per frame
     void FixedUpdate()
@@ -66,13 +74,15 @@ public class Body : MonoBehaviour
         GetComponent<Rigidbody>().AddForce(vecForceInput);
 
         //Gère la rotation du corps et de la vitesse
-        if(MyController.WantedSpeed > 0)
+        myAnimator.SetFloat("IsRunning", MyController.WantedSpeed);
+        if (MyController.WantedSpeed > 0)
         {
             float angleRotBody = Vector3.Angle(transform.forward, wantedDirectionMoveBody);
             float angleRotVelocity = Vector3.Angle(currentVelocity, wantedDirectionMoveBody);
             float angleRotMax = Time.deltaTime * rotationSpeed;
             angleRotBody = Mathf.Min(angleRotBody, angleRotMax);
             angleRotVelocity = Mathf.Min(angleRotVelocity, angleRotMax);
+            
 
             if (Mathf.Abs(angleRotBody) > 0)
             {
@@ -108,6 +118,17 @@ public class Body : MonoBehaviour
             TimeJump = TimeBetweenJumps;
             GetComponent<Rigidbody>().AddForce(new Vector3(0, 1, 0) * PowerJump, ForceMode.Impulse);
             doubleSaut = false;
+        }
+
+        //Trigger animator Jump
+        if (touchGround)
+        {
+            //myAnimator.SetBool("IsJumping", false);
+
+        }
+        else
+        {
+            //myAnimator.SetBool("IsJumping", true);
         }
 
     }
