@@ -123,12 +123,12 @@ public class Body : MonoBehaviour
         //Trigger animator Jump
         if (touchGround)
         {
-            //myAnimator.SetBool("IsJumping", false);
+            myAnimator.SetBool("IsJumping", false);
 
         }
         else
         {
-            //myAnimator.SetBool("IsJumping", true);
+            myAnimator.SetBool("IsJumping", true);
         }
 
     }
