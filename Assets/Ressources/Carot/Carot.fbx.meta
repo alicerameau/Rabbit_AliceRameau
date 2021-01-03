@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 22feaff7e56c9ad49bdbf2bfd3548c22
+guid: e9557bb0b562b0b4ba1989d1694dffdf
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable:
   - first:
       74: 4781951162920444690
-    second: Idle_Levitation
+    second: Carot_Idle
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -35,7 +35,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Idle_Levitation
+      name: Carot_Idle
       takeName: Armature|ArmatureAction
       internalID: 0
       firstFrame: 1
